@@ -15,10 +15,10 @@ Drink Database to import Drink Items w/ alcohol content.
 BAC Database. We may need to convert a public table to our own private table.
 
 ## Roles / Strengths
-- Joe: Backend 
-- Wes: Backend
-- John: Backend
-- Casey: Front End 
+- Joe: Full Stack - Backend 
+- Wes: Full Stack -Backend
+- John: Full Stack -Backend
+- Casey: Full Stack - Front End 
 
 ## MVP
 -PHASE ONE
@@ -31,7 +31,7 @@ BAC Database. We may need to convert a public table to our own private table.
 -PHASE THREE
 Combat the "Hangover Gremlin" by drinking water.
 
-##WIREFRAME
+## Wireframe
 ![Initial Wireframe](/public/images/NoRegrets_Wireframe.png?raw=true "Wireframe")
 
 ## Trello Board
