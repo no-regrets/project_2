@@ -1,5 +1,4 @@
-# project_2
-No Regrets - 
+# No Regrets - Project_2
 
 ## Value Add Proposal
 
@@ -24,9 +23,11 @@ BAC Database. We may need to convert a public table to our own private table.
 ## MVP
 -PHASE ONE
 * Create User Account that can track drinking log, across multiple sessions w/ Persistance 
+
 -PHASE TWO
 * Addition of Drinks starts a timer until you are sober again based on BAC table/database/api. Creating a budget that will countdown how much money you've spent. 
 * Once over the limit, implement additional functionality. Call an Uber/ Either as a simple link or an API 
+
 -PHASE THREE
 Combat the "Hangover Gremlin" by drinking water.
 
