@@ -5,7 +5,7 @@
 // Dependencies
 // =============================================================
 
-// Requiring our Todo model
+// Requiring our models
 var db = require("../models");
 
 // Routes
@@ -49,7 +49,7 @@ module.exports = function(app) {
       alcoholContent: req.body.alcoholContent
     })
       .then(function(dbPost) {
-        // We have access to the new todo as an argument inside of the callback function
+        // We have access to the new drink as an argument inside of the callback function
         res.json(dbPost);
       })
       .catch(function(err) {
