@@ -7,7 +7,6 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 
 <body>
@@ -15,13 +14,18 @@
         <h1>No Regrets</h1>
     </header>
     <section>
-        <form>
+        <form>  
             <input type="text" placeholder="Name">
             <input type="email" placeholder="Email">
-            <input type="number" placeholder="Weight (Pounds)">
-            <input type="text" placeholder="Sex">
+            <input type="number" placeholder="Weight (Pounds)" min="90" max="800">
+            <select name="Sex">
+                <option selected disabled>Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
             <input type="text" placeholder="Password">
             <input type="text" placeholder="Confirm Password">
+            
             <button>Let's Drink!</button>
         </form>
     </section>
