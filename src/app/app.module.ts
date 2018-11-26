@@ -24,6 +24,7 @@ import {
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AddUserComponent } from './add-user/add-user.component';
 
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
