@@ -1,0 +1,84 @@
+<h1>Home</h1>
+<p>You're logged in to (No) Regrets!!</p>
+<div>
+    Users from secure api end point:
+    <ul>
+        <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+    </ul>
+</div>
+
+
+<h3>Add User</h3>
+<div [hidden]="submitted">
+    <form #addUserForm="ngForm">
+
+      <div class="form-group">
+        <label for="username">Name</label>
+        <input type="text" class="form-control" id="username" placeholder="Give User's FirstName" 
+        required
+        [(ngModel)]="user.username" name="username" #username="ngModel">
+        <div [hidden]="username.valid || username.pristine"
+             class="alert alert-danger">
+            Name is required
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" placeholder="Give User's Email"
+        required
+        [(ngModel)]="user.email" name="email" #email="ngModel">
+        <div [hidden]="email.valid || email.pristine"
+             class="alert alert-danger">
+            Email is required
+        </div>
+      </div>
+            
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" class="form-control" id="password" placeholder="Give User's Password"
+        required
+        [(ngModel)]="user.password" name="password" #password="ngModel">
+        <div [hidden]="password.valid || password.pristine"
+             class="alert alert-danger">
+            Password is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="sex">Sex</label>
+        <input type="text" class="form-control" id="sex" placeholder="Give User's Sex"
+        required
+        [(ngModel)]="user.sex" name="sex" #sex="ngModel">
+        <div [hidden]="sex.valid || sex.pristine"
+             class="alert alert-danger">
+            Sex is required
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="weight">Weight</label>
+        <input type="number" class="form-control" id="weight" 
+        placeholder="Give User's Weight"
+        required
+        [(ngModel)]="user.weight" name="weight" #weight="ngModel">
+        <div [hidden]="weight.valid || weight.pristine"
+             class="alert alert-danger">
+            Weight is required
+        </div>
+      </div>
+      
+      <div class="btn-group btn-group-sm">
+      	<button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+      	<button type="button" class="btn btn-dark" (click)="addUser()" [disabled]="!addUserForm.form.valid">Add</button>
+      </div>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+  <p>Submitted Successfully! -> <span class="badge badge-light">{{user.firstname}}  {{user.lastname}}</span></p>
+	<div class="btn-group btn-group-sm">
+    	<button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+    	<button type="button" class="btn btn-dark" (click)="newUser(); addUserForm.reset()">Continue</button>
+    </div>
+</div>
