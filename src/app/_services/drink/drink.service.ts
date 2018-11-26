@@ -11,7 +11,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DrinkService {
-  private drinksUrl = '/api/drinks';  // URL to web api
+  //TODO must remove localhost (everything before /api)
+  private drinksUrl = 'http://localhost:8080/api/drinks';  // URL to web api
   constructor( 
     private http: HttpClient
   ) { }
