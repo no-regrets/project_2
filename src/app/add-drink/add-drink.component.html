@@ -1,0 +1,39 @@
+<div class="main-content">
+  <h3>Add Drink</h3>
+  <div [hidden]="submitted">
+    <form #addDrinkForm="ngForm">
+
+      <div class="form-group">
+        <label for="name">Drink Name</label>
+        <input type="text" class="form-control" id="name" placeholder="What drink?" required [(ngModel)]="drink.name"
+          name="name" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          Drink Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="alcoholContent">Alcohol %</label>
+        <input type="number" class="form-control" id="alcoholContent" placeholder="What's the alcohol content?"
+          required [(ngModel)]="drink.alcoholContent" name="alcoholContent" #alcoholContent="ngModel">
+        <div [hidden]="alcoholContent.valid || alcoholContent.pristine" class="alert alert-danger">
+          Age is required
+        </div>
+      </div>
+
+      <div class="btn-group btn-group-sm">
+        <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+        <button type="button" class="btn btn-dark" (click)="addDrink()">Add</button>
+      </div>
+    </form>
+  </div>
+
+
+  <div [hidden]="!submitted">
+    <p>Submitted Successfully! -> <span class="badge badge-light">{{drink.name}}</span></p>
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+      <button type="button" class="btn btn-dark" (click)="newDrink(); addDrinkForm.reset()">Continue</button>
+    </div>
+  </div>
+</div>
