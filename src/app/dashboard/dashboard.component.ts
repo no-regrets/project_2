@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
+import { Session } from '../_services/session/session';
+import { SessionService } from '../_services/session/session.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +11,9 @@ import * as Chartist from 'chartist';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  session = new Session();
+
+  constructor(private sessionService: SessionService) { }
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;
@@ -42,6 +47,22 @@ export class DashboardComponent implements OnInit {
 
       seq = 0;
   };
+
+  startSession() {
+    let endedAt = moment.max();
+    this.save(endedAt);
+  }
+
+  private save(endedAt): void {
+    this.session.drinkGoal=500;
+    this.session.createdAt=moment().toDate();
+    this.session.endedAt = endedAt;
+
+    console.log(this.session);
+    this.sessionService.addSession(this.session)
+      .subscribe();
+  }
+
   startAnimationForBarChart(chart){
       let seq2: any, delays2: any, durations2: any;
 
