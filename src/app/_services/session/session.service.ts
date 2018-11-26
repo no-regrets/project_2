@@ -11,7 +11,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SessionService {
-  private sessionsUrl = '/api/sessions';  // URL to web api
+  //TODO: remove
+  private sessionsUrl = 'http://localhost:8080/api/sessions';  // URL to web api
   constructor( 
     private http: HttpClient
   ) { }

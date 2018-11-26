@@ -1,105 +1,129 @@
 <div class="main-content">
-  <div class="container-fluid">
-      <div class="row">
-          <div class="col-md-8">
-              <div class="card">
-                  <div class="card-header card-header-danger">
-                      <h4 class="card-title">Edit Profile</h4>
-                      <p class="card-category">Complete your profile</p>
-                  </div>
-                  <div class="card-body">
-                      <form>
-                          <div class="row">
-                              <!-- <div class="col-md-5">
-                                <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Company (disabled)" disabled>
-                                  </mat-form-field>
-                              </div> -->
-                              <div class="col-md-6">
-                                  <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Username">
-                                  </mat-form-field>
-                              </div>
-                              <div class="col-md-6">
-                                  <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Email address" type="email">
-                                  </mat-form-field>
-                              </div>
-                          </div>
-                          <!-- <div class="row">
-                              <div class="col-md-6">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Fist Name" type="text">
-                                </mat-form-field>
-                              </div>
-                              <div class="col-md-6">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Last Name" type="text">
-                                </mat-form-field>
-                              </div>
-                          </div> -->
-                          <!-- <div class="row">
-                              <div class="col-md-12">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Adress" type="text">
-                                </mat-form-field>
-                              </div>
-                          </div> -->
-                          <div class="row">
-                              <div class="col-md-4">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Password" type="text">
-                                </mat-form-field>
-                              </div>
-                              <div class="col-md-4">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Sex" type="text">
-                                </mat-form-field>
-                              </div>
-                              <div class="col-md-4">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Weight" type="text">
-                                </mat-form-field>
-                              </div>
-                          </div>
-                          <!-- <div class="row">
-                              <div class="col-md-12">
-                                <label>About Me</label>
-                                <mat-form-field class="example-full-width">
-                                   <textarea matInput placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."></textarea>
-                                 </mat-form-field>
-                                  <div class="form-group">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Edit Profile</h4>
+                        <p class="card-category">Complete your profile</p>
+                    </div>
+                    <div class="card-body">
+                        <div [hidden]="submitted">
+                        <form #addUserForm="ngForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" class="form-control" id="username" matInput placeholder="Username"
+                                                required [(ngModel)]="user.username" name="username" #username="ngModel">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" class="form-control" id="email" matInput placeholder="Email address"
+                                                required [(ngModel)]="user.email" name="email" #email="ngModel">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" class="form-control" id="password" matInput placeholder="Password"
+                                                required [(ngModel)]="user.password" name="password" #password="ngModel">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" class="form-control" id="sex" matInput placeholder="Sex"
+                                                required [(ngModel)]="user.sex" name="sex" #sex="ngModel">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" class="form-control" id="weight" matInput placeholder="Weight"
+                                                required [(ngModel)]="user.weight" name="weight" #weight="ngModel">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="addUser()">Create
+                                Profile</button>
+                            <div class="clearfix"></div>
+                        </form>
+                        </div>
 
-                                      <div class="form-group">
-                                          <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                                          <textarea class="form-control" rows="5"></textarea>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div> -->
-                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile</button>
-                          <div class="clearfix"></div>
-                      </form>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="card card-profile">
-                  <div class="card-avatar">
-                      <a href="#pablo">
-                          <img class="img" src="./assets/img/faces/joe.jpg" />
-                      </a>
-                  </div>
-                  <div class="card-body">
-                      <h6 class="card-category text-gray">Angulord Imposter</h6>
-                      <h4 class="card-title">Joseaph Mankin</h4>
-                      <p class="card-description">
-                          Howdy, your loveable draconian overlord here. Sure it's a dumpster fire, but it's OUR dumpster fire. 
-                      </p>
-                      <a href="https://github.com/JoseaphMankin" class="btn btn-danger btn-round">Github</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+                        <div [hidden]="!submitted">
+                            <p>Submitted Successfully! -> <span class="badge badge-light">{{user.name}}</span></p>
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+                                <button type="button" class="btn btn-dark" (click)="newUser(); addUserForm.reset(); getUsers();">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <a href="#pablo">
+                            <img class="img" src="./assets/img/faces/joe.jpg" />
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-category text-gray">Angulord Imposter</h6>
+                        <h4 class="card-title">Joseaph Mankin</h4>
+                        <p class="card-description">
+                            Howdy, your loveable draconian overlord here. Sure it's a dumpster fire, but it's OUR
+                            dumpster fire.
+                        </p>
+                        <a href="https://github.com/JoseaphMankin" class="btn btn-danger btn-round">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Select Existing Profile</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Username
+                                    </th>
+                                    <th>
+                                        
+                                    </th>
+                                </thead>
+                                <tbody *ngFor="let user of users">
+                                    <tr>
+                                        <td>{{user?.id}}</td>
+                                        <td>{{user?.username}}</td>
+                                        <td>
+                                            <div class="btn btn-danger">Select</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
