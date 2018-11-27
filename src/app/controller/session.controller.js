@@ -1,10 +1,12 @@
-const db = require('../config/db.config.js');
-const Session = db.sessions;
+//const db = require('../config/db.config.js');
+const db = require('./../model');
+const Session = db.Session;
 
 // Post a Session
 exports.create = (req, res) => {	
 	// Save to MySQL database
 	let session = req.body;
+	console.log(session);
 	Session.create(session).then(result => {		
 		// Send created session to client
 		res.json(result);

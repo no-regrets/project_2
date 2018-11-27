@@ -47,13 +47,19 @@
 // };
 
 module.exports = (sequelize, Sequelize) => {
-	const User = sequelize.define('user', {
+	const User = sequelize.define('User', {
     username: { type: Sequelize.STRING, allowNull: false },
     email: { type: Sequelize.STRING, allowNull: false },
     password: { type: Sequelize.STRING, allowNull: false },
     sex: { type: Sequelize.STRING, allowNull: false },
     weight: { type: Sequelize.FLOAT, allowNull: false }
-	});
+    });
+    
+    User.associate = function(models) {
+        User.hasMany(models.Session, {
+            onDelete: "cascade"
+        });
+      };
 	
 	return User;
 };

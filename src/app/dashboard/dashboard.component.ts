@@ -49,16 +49,32 @@ export class DashboardComponent implements OnInit {
   };
 
   startSession() {
-    let endedAt = moment.max();
-    this.save(endedAt);
+    let foreignUser = localStorage.getItem('userID');
+    console.log(foreignUser);
+    let endedAt = null;
+    this.save(endedAt, foreignUser);
   }
 
-  private save(endedAt): void {
+  // endSession() {
+  //   let endedAt = moment.now();
+  //   let currentSession = this.sessionService.getMaxSession();
+  //   return this.sessionService.getSessions()
+  //   .subscribe(
+  //     sessions => {
+  //       this.session=sessions
+  //     }
+  //   );
+  //   console.log(currentSession);
+  // }
+
+  private save(endedAt, localID): void {
     this.session.drinkGoal=500;
     this.session.createdAt=moment().toDate();
     this.session.endedAt = endedAt;
+    this.session.maxBAC = 40.0;
+    console.log("this is my local id" + localID);
+    this.session.UserId = localID;
 
-    console.log(this.session);
     this.sessionService.addSession(this.session)
       .subscribe();
   }

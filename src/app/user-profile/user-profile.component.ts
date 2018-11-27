@@ -48,6 +48,11 @@ export class UserProfileComponent implements OnInit {
     this.location.back();
   }
 
+  setUser(user) {
+    console.log(user);
+    localStorage.setItem('userID', user.id);
+  }
+
   private save(): void {
     console.log(this.user);
     this.userService.addUser(this.user)
