@@ -1,0 +1,25 @@
+.navLogo{
+    height: 47px;
+    width: auto;
+    float: right;
+}
+
+@font-face{
+    font-family:"neon";
+    font-weight: normal;
+    font-style: normal;
+    src: local("neon"), url("/assets/css/fonts/HalogenGasLights.otf")
+}
+
+.nav{
+    /* font-family: 'Ranga', cursive; */
+}
+
+.navbar{
+    color: #c10b0d;
+    font-family: "neon" ;
+    text-shadow: 2px, 2px, red;
+    
+        /* font-family: 'Ranga', cursive; */
+
+}
