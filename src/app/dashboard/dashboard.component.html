@@ -65,21 +65,21 @@
                             <i class="material-icons">local_drink</i>
                         </div>
                         <p class="card-category">Amount of Drinks</p>
-                        <h3 class="card-title">3</h3>
+                        <h3 class="card-title">{{drinks}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="row">
                             <div class="col-3">
-                                <img class="wine nrlogo" src="../../assets/img/wine.png">
+                                <img class="wine nrlogo" (click)="drinkcounter()" src="../../assets/img/wine.png">
                             </div>
                             <div class="col-3">
-                                <img class="cocktail nrlogo" src="../../assets/img/cocktail.png">
+                                <img class="cocktail nrlogo" (click)="drinkcounter()" src="../../assets/img/cocktail.png">
                             </div>
                             <div class="col-3">
-                                <img class="shot nrlogo" src="../../assets/img/shot.png">
+                                <img class="shot nrlogo" (click)="drinkcounter()" src="../../assets/img/shot.png">
                             </div>
                             <div class="col-3">
-                                <img class="water nrlogo" src="../../assets/img/water.png">
+                                <img class="water nrlogo" (click)="drinkcounter()" src="../../assets/img/water.png">
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                             <i class="material-icons">local_hospital</i>
                         </div>
                         <p class="card-category">Current BAC</p>
-                        <h3 class="card-title">.05</h3>
+                        <h3 class="card-title">.00</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
