@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Drink } from '../_services/drink/drink';
+import { DrinkService } from '../_services/drink/drink.service';
 
 @Component({
   selector: 'app-table-list',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableListComponent implements OnInit {
 
-  constructor() { }
+  drinks: Drink[];
+
+  constructor(private drinkService: DrinkService) { }
 
   ngOnInit() {
+    this.getDrinks();
+  }
+
+  getDrinks(){
+    return this.drinkService.getDrinks()
+            .subscribe(
+              drinks => {
+                this.drinks=drinks
+              }
+            );
   }
 
 }

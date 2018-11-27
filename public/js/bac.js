@@ -24,7 +24,7 @@ module.exports = function(sex, weight, bac){
         if(weight >= 230){
             bac += .016
         }
-
+        return bac
     }
     if(sex === "female"){
         if(weight >= 90 && weight < 110){
@@ -51,6 +51,6 @@ module.exports = function(sex, weight, bac){
         if(weight >= 230){
             bac += .019
         }
-
+        return bac
     }
 }
