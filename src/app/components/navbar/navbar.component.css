@@ -1,0 +1,52 @@
+.navLogo{
+    height: 65px;
+    margin:0;
+    width: auto;
+    float: right;
+    align-content: center;
+    border:0;
+}
+
+@font-face{
+    font-family:"neon";
+    font-weight: normal;
+    font-style: normal;
+    src: local("neon"), url("/assets/css/fonts/HalogenGasLights.otf")
+}
+
+.nav{
+    /* font-family: 'Ranga', cursive; */
+}
+
+
+.navbar{
+    /* background-position: center;
+    background-size:120%;
+    background-image: url("/assets/img/coaster.png"); */
+    color: #c10b0d;
+    font-family: "neon" ;
+}
+.navbar::after {
+content: "";
+    background-position: center;
+    background-size:120%;
+    background-image: url("/assets/img/coaster.png");
+opacity: 0.70;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: absolute;
+z-index: -1;   
+}
+
+
+.neon{
+    font-size: 36px;
+    text-shadow: 0 0 20px #FF0000; 
+}
+
+.green{
+    background-color:rgb(74, 103, 27);
+    box-shadow: 0 0 5px green;
+}

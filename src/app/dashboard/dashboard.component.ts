@@ -48,6 +48,18 @@ export class DashboardComponent implements OnInit {
       seq = 0;
   };
 
+  drinks: number = 0;
+// LastName: string = '';
+
+// changeName():void{
+//     this.FirstName = 'New First Name';
+//     this.LastName = 'New Last Name';
+// }
+  drinkcounter() {
+   this.drinks += 1
+   console.log(drinks)
+  }
+
   startSession() {
     let foreignUser = localStorage.getItem('userID');
     console.log(foreignUser);
