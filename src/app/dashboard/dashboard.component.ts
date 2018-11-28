@@ -57,22 +57,48 @@ export class DashboardComponent implements OnInit {
 // }
   drinkcounter() {
    this.drinks += 1
-   console.log(drinks)
+   console.log(this.drinks)
   }
 
   startSession() {
-    let endedAt = moment.max();
-    this.save(endedAt);
+    let foreignUser = localStorage.getItem('userID');
+    console.log(foreignUser);
+    let endedAt = null;
+    this.save(endedAt, foreignUser);
   }
 
-  private save(endedAt): void {
+  // endSession() {
+  //   let endedAt = moment.now();
+  //   let currentSession = this.sessionService.getMaxSession();
+  //   return this.sessionService.getSessions()
+  //   .subscribe(
+  //     sessions => {
+  //       this.session=sessions
+  //     }
+  //   );
+  //   console.log(currentSession);
+  // }
+
+  private save(endedAt, localID): void {
+
+    if (localID) {
+    // set up session info
     this.session.drinkGoal=500;
     this.session.createdAt=moment().toDate();
     this.session.endedAt = endedAt;
+    this.session.maxBAC = 40.0;
+    console.log("this is my local id" + localID);
+    this.session.UserId = localID;
 
-    console.log(this.session);
+    // Set session Id for tracking
     this.sessionService.addSession(this.session)
-      .subscribe();
+      .subscribe(sess =>
+        localStorage.setItem('sessionId', sess.id.toString())
+      );
+    }
+    else {
+      console.log("Must be logged in!");
+    }
   }
 
   startAnimationForBarChart(chart){

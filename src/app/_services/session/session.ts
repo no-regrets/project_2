@@ -3,5 +3,7 @@ export class Session {
     drinkGoal: number;
     createdAt: Date;
     endedAt: Date;
+    maxBAC: number;
+    UserId: number;
 }
 

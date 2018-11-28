@@ -18,11 +18,11 @@ export class AddDrinkComponent {
 
     newDrink(): void {
       this.submitted = false;
-      this.drink = new Drink();
-    }
+      this.drink = new Drink();    }
     
  addDrink() {
   this.submitted = true;
+  this.drink.SessionId = parseInt(localStorage.getItem('sessionId'));
   this.save();
 }
 

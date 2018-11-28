@@ -23,14 +23,15 @@ if (process.env.JAWSDB_URL){
 
 const db = {};
 
-db.Sequelize = Sequelize;
-db.sequelize = sequelize;
 
 //Models/tables
 db.customers = require('../model/customer.model.js')(sequelize, Sequelize);
-db.users = require('../model/user.model.js')(sequelize, Sequelize);
-db.drinks = require('../model/drink.model.js')(sequelize, Sequelize);
-db.sessions = require('../model/session.model.js')(sequelize, Sequelize);
+db.users = require('../model/user.js')(sequelize, Sequelize);
+db.drinks = require('../model/drink.js')(sequelize, Sequelize);
+db.sessions = require('../model/session.js')(sequelize, Sequelize);
+
+db.Sequelize = Sequelize;
+db.sequelize = sequelize;
 
 
 module.exports = db;

@@ -10,6 +10,13 @@ module.exports = function(sequelize, Sequelize) {
         }
     });
   
+
+
+    Drink.associate = function(models) {
+      Drink.belongsTo(models.Session);
+    };
+
+
     return Drink;
   };
   

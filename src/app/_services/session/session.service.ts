@@ -21,6 +21,15 @@ export class SessionService {
     return this.http.get<Session[]>(this.sessionsUrl)
   }
 
+  // getMaxSession (): Observable<Session> {
+  //   let sessions:Session[] = [];
+  //   this.getSessions().subscribe(sessions => this.sessions = sessions);
+  //   let sessionArr = this.http.get<Session[]>(this.sessionsUrl)
+  //   let maxIndex: number = sessionArr.length-1;
+  //   const url = `${this.sessionsUrl}/${maxIndex}`;
+  //   return this.http.get<Session>(url);
+  // }
+
   getSession(id: number): Observable<Session> {
     const url = `${this.sessionsUrl}/${id}`;
     return this.http.get<Session>(url);
