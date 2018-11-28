@@ -1,5 +1,5 @@
-const db = require('../config/db.config.js');
-const Drink = db.drinks;
+const db = require('./../model');
+const Drink = db.Drink;
 
 // Post a Drink
 exports.create = (req, res) => {

@@ -8,13 +8,12 @@ module.exports = function(sequelize, Sequelize) {
 
   Session.associate = function(models) {
     Session.belongsTo(models.User, {
-      //foreignKey: 'UserId', targetKey: 'id', 
-      onDelete: "cascade"
-      // foreignKey: {
-      //   allowNull: false
-      // } 
+      onDelete: "cascade",
+      foreignKey: {
+        allowNull: false
+      } 
     });
-    //Session.hasMany(models.Drink);
+    Session.hasMany(models.Drink);
   };
 
   return Session;

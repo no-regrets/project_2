@@ -57,7 +57,7 @@ export class DashboardComponent implements OnInit {
 // }
   drinkcounter() {
    this.drinks += 1
-   console.log(drinks)
+   console.log(this.drinks)
   }
 
   startSession() {
@@ -80,6 +80,9 @@ export class DashboardComponent implements OnInit {
   // }
 
   private save(endedAt, localID): void {
+
+    if (localID) {
+    // set up session info
     this.session.drinkGoal=500;
     this.session.createdAt=moment().toDate();
     this.session.endedAt = endedAt;
@@ -87,8 +90,15 @@ export class DashboardComponent implements OnInit {
     console.log("this is my local id" + localID);
     this.session.UserId = localID;
 
+    // Set session Id for tracking
     this.sessionService.addSession(this.session)
-      .subscribe();
+      .subscribe(sess =>
+        localStorage.setItem('sessionId', sess.id.toString())
+      );
+    }
+    else {
+      console.log("Must be logged in!");
+    }
   }
 
   startAnimationForBarChart(chart){
