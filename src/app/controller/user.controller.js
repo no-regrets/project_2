@@ -1,5 +1,6 @@
-const db = require('../config/db.config.js');
-const User = db.users;
+//const db = require('../config/db.config.js');
+const db = require('./../model');
+const User = db.User;
 
 // Post a User
 exports.create = (req, res) => {	

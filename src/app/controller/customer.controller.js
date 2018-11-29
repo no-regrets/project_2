@@ -1,5 +1,6 @@
-const db = require('../config/db.config.js');
-const Customer = db.customers;
+//const db = require('../config/db.config.js');
+const db = require('./../model');
+const Customer = db.Customer;
 
 // Post a Customer
 exports.create = (req, res) => {
