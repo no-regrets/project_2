@@ -31,3 +31,11 @@
 .backImage{
     background-image: url(../../assets/img/divebar-hero-dark.jpg)
 }
+
+.btnSize{
+    height: auto;
+    width: 100%;
+    margin: 10px;
+    align-content: center
+    
+}
