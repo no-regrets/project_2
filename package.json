@@ -4,16 +4,17 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && ng serve -o"
-  },
+    "prestart": "ng build"
+    },
   "engines": {
     "node": "10.14.0",
-    "npm": "3.10.9"
+    "npm": "6.4.1"
   },
   "private": true,
   "dependencies": {
@@ -33,7 +34,7 @@
     "@angular/platform-browser-dynamic": "7.1.0",
     "@angular/platform-server": "7.1.0",
     "@angular/router": "7.1.0",
-    "@types/bootstrap": "3.3.32",
+    "@types/bootstrap": "4.1.0",
     "ajv": "6.4.0",
     "arrive": "2.4.1",
     "bootstrap": "4.1.0",
