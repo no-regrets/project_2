@@ -48,6 +48,8 @@
                         </div>
                         <p class="card-category">Session Start</p>
                         <h3 class="card-title">9:35pm</h3>
+                        <p class="card-category">Time when legally sober</p>
+                        <h3 class="card-title">{{TimeAt}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
@@ -94,11 +96,13 @@
                             <i class="material-icons">local_hospital</i>
                         </div>
                         <p class="card-category">Current BAC</p>
-                        <h3 class="card-title">.00</h3>
+                        <h3 class="card-title">{{currentbac}}</h3>
+                        <p class="card-category">Max BAC</p>
+                        <h3 class="card-title">{{bac}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">update</i>
+                            <i class="material-icons" (click)="decayBac()">update</i>
                         </div>
                     </div>
                 </div>
