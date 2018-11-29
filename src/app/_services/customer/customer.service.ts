@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class CustomerService {
   //TODO: will need to remove everything prior to /api in production, CORS error
-  private customersUrl = 'http://localhost:8080/api/customers';  // URL to web api
+  private customersUrl = 'api/customers';  // URL to web api
   constructor( 
     private http: HttpClient
   ) { }
