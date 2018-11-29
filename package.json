@@ -47,6 +47,7 @@
     "jquery": "3.2.1",
     "moment": "^2.22.1",
     "mysql2": "^1.6.4",
+    "nodemon": "^1.18.7",
     "path": "^0.12.7",
     "perfect-scrollbar": "1.1.0",
     "popper.js": "1.14.3",
