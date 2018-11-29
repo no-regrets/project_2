@@ -55,10 +55,11 @@ export class DashboardComponent implements OnInit {
   //     this.FirstName = 'New First Name';
   //     this.LastName = 'New Last Name';
   // }
-  drinkcounter() {
+  drinkcounter(timestart) {
     this.drinks += 1
     console.log(this.drinks)
     this.addbac("male", 100)
+    this.decayBac()
   }
 
   bac: number = 0;
@@ -123,19 +124,20 @@ export class DashboardComponent implements OnInit {
 }
 
 
-  decayBac(startTime) {
-    //var moment = require('moment');
+  decayBac() {
     moment().format();
     console.log(this.bac)
     var current = moment()
-    var difference = startTime.diff(current, "minutes")
+    var timestart = this.useable
+    var difference = timestart.diff(current, "minutes")
     console.log(difference)
     difference *= (.015 / 60)
     this.currentbac = this.bac
-    this.currentbac -= difference
+    this.currentbac += difference
     if (this.currentbac < 0) {
       this.currentbac = 0
     }
+    this.currentbac = this.currentbac.toFixed(4)
     console.log(this.bac)
 
   }
@@ -168,12 +170,20 @@ export class DashboardComponent implements OnInit {
     // console.log(TimeTillSober.diff(current, "minutes"))
 
   }
-
+  useable: number = '';
+  startTime: number = '';
   startSession() {
+    //var moment = require('moment');
+    moment().format()
     let foreignUser = localStorage.getItem('userID');
     console.log(foreignUser);
     let endedAt = null;
+    var timestart = moment();
+    this.startTime = timestart.format("hh:mm a");
+    this.useable = timestart
     this.save(endedAt, foreignUser);
+    console.log("start session timestart" + timestart)
+    return timestart
   }
 
   // endSession() {
