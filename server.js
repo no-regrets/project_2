@@ -10,7 +10,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use(express.static('dist/angular6-httpclient'));
+app.use(express.static('dist/angular-no-regrets'));
 
 const db = require('./src/app/model');
   
