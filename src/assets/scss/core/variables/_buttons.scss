@@ -9,8 +9,8 @@ $bmd-btn-color: $gray-dark !default;
 $bmd-btn-bg: transparent !default; //$body-bg !default; // #fff
 $bmd-btn-border: #ccc !default;
 
-$bmd-btn-focus-bg: rgba(#999, .20) !default; // spec: bg Hover: 20% #999999
-$bmd-btn-active-bg: rgba(#999, .40) !default; // spec: bg Pressed: 40% #999999
+$bmd-btn-focus-bg: rgba(#999, .20) !default; // spec: bg Hover: 20% black
+$bmd-btn-active-bg: rgba(#999, .40) !default; // spec: bg Pressed: 40% black
 $bmd-btn-disabled: rgba($black, .26) !default; // spec: light theme: Disabled text: 26% $black
 
 $bmd-inverse-btn-focus-bg: rgba(#ccc, .15) !default; // spec: dark bg Hover: 15% #CCCCCC
