@@ -57,6 +57,7 @@ export class DashboardComponent implements OnInit {
   // }
   drinkcounter(timestart) {
     this.drinks += 1
+    this.money -= 7
     console.log(this.drinks)
     this.addbac("male", 100)
     this.decayBac()
@@ -64,6 +65,7 @@ export class DashboardComponent implements OnInit {
 
   bac: number = 0;
   currentbac: number = 0.000;
+  money: number = 75;
 
   addbac(sex, weight){
     if(sex === "male"){

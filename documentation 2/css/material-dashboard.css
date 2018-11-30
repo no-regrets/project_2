@@ -2744,7 +2744,7 @@ fieldset:disabled a.btn {
     -webkit-box-shadow: none;
             box-shadow: none; }
   .btn-link:disabled, .btn-link.disabled {
-    color: #999999; }
+    color: black; }
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 1.125rem 2.25rem;
@@ -7765,8 +7765,8 @@ button:focus {
         color: #e91e63; }
   .btn, .btn.btn-default {
     color: #fff;
-    background-color: #999999;
-    border-color: #999999;
+    background-color: black;
+    border-color: black;
     -webkit-box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
             box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12); }
     .btn:hover, .btn.btn-default:hover {
@@ -7805,29 +7805,29 @@ button:focus {
         border-color: #595959; }
     .open > .btn.dropdown-toggle.bmd-btn-icon, .open > .btn.btn-default.dropdown-toggle.bmd-btn-icon {
       color: inherit;
-      background-color: #999999; }
+      background-color: black; }
       .open > .btn.dropdown-toggle.bmd-btn-icon:hover, .open > .btn.btn-default.dropdown-toggle.bmd-btn-icon:hover {
         background-color: #919191; }
     .btn.disabled:focus, .btn.disabled.focus, .btn:disabled:focus, .btn:disabled.focus, .btn.btn-default.disabled:focus, .btn.btn-default.disabled.focus, .btn.btn-default:disabled:focus, .btn.btn-default:disabled.focus {
-      background-color: #999999;
-      border-color: #999999; }
+      background-color: black;
+      border-color: black; }
     .btn.disabled:hover, .btn:disabled:hover, .btn.btn-default.disabled:hover, .btn.btn-default:disabled:hover {
-      background-color: #999999;
-      border-color: #999999; }
+      background-color: black;
+      border-color: black; }
     .btn:focus, .btn:active, .btn:hover, .btn.btn-default:focus, .btn.btn-default:active, .btn.btn-default:hover {
       -webkit-box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
               box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2); }
     .btn.btn-link, .btn.btn-default.btn-link {
       background-color: transparent;
-      color: #999999;
+      color: black;
       -webkit-box-shadow: none;
               box-shadow: none; }
       .btn.btn-link:hover, .btn.btn-link:focus, .btn.btn-link:active, .btn.btn-default.btn-link:hover, .btn.btn-default.btn-link:focus, .btn.btn-default.btn-link:active {
         background-color: transparent;
-        color: #999999; }
+        color: black; }
   .btn.btn-white, .btn.btn-white:focus, .btn.btn-white:hover {
     background-color: #fff;
-    color: #999999; }
+    color: black; }
   .btn.btn-white.btn-link {
     color: #fff;
     background: transparent;
@@ -8746,7 +8746,7 @@ button:focus {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
   .card .card-category:not([class*="text-"]) {
-    color: #999999; }
+    color: black; }
   .card .card-category {
     margin-top: 10px; }
     .card .card-category .material-icons {
@@ -8785,7 +8785,7 @@ button:focus {
       display: -ms-inline-flexbox;
       display: inline-flex; }
     .card .card-footer .stats {
-      color: #999999; }
+      color: black; }
       .card .card-footer .stats .material-icons {
         position: relative;
         top: -10px;
@@ -8985,7 +8985,7 @@ button:focus {
     margin-right: 0; }
     .card-plain .card-header:not(.card-avatar) .card-category,
     .card-plain .card-header:not(.card-avatar) .card-description {
-      color: #999999; }
+      color: black; }
   .card-plain .card-body {
     padding-left: 5px;
     padding-right: 5px; }
@@ -9115,7 +9115,7 @@ button:focus {
       width: 100%; }
     .card .card-body + .card-footer .stats,
     .card .card-footer .stats {
-      color: #999999;
+      color: black;
       font-size: 12px;
       line-height: 22px; }
       .card .card-body + .card-footer .stats .card-category,
@@ -9139,7 +9139,7 @@ button:focus {
     .card [class*="card-header-"] .card-icon,
     .card [class*="card-header-"] .card-text {
       border-radius: 3px;
-      background-color: #999999;
+      background-color: black;
       padding: 15px;
       margin-top: -20px;
       margin-right: 15px;
@@ -9200,7 +9200,7 @@ button:focus {
     margin-bottom: 0;
     margin-top: 0; }
     .card.card-stats .card-header .card-category:not([class*="text-"]) {
-      color: #999999;
+      color: black;
       font-size: 14px; }
   .card.card-stats .card-header + .card-footer {
     border-top: 1px solid #eee;
@@ -9557,7 +9557,7 @@ form {
 .switch label,
 .is-focused
 .switch label {
-  color: #999999; }
+  color: black; }
   .radio label label:has(input[type=radio][disabled]), .radio label label:has(input[type=radio][disabled]):hover, .radio label label:has(input[type=radio][disabled]):focus,
   .radio label label:has(input[type=checkbox][disabled]),
   .radio label label:has(input[type=checkbox][disabled]):hover,
@@ -9709,11 +9709,11 @@ form {
   fieldset[disabled]
   .is-focused
   .switch label:focus {
-    color: #999999; }
+    color: black; }
 
 [class^='bmd-label'],
 [class*=' bmd-label'] {
-  color: #999999; }
+  color: black; }
 
 .form-control,
 .is-focused .form-control {
@@ -9751,7 +9751,7 @@ fieldset[disabled][disabled] .form-control, .form-control.disabled, .form-contro
   width: 100%;
   margin-top: 0.25rem;
   font-size: 80%;
-  color: #999999; }
+  color: black; }
 
 .is-focused .valid-tooltip {
   position: absolute;
@@ -9770,11 +9770,11 @@ fieldset[disabled][disabled] .form-control, .form-control.disabled, .form-contro
 .was-validated .is-focused .form-control:valid, .is-focused .form-control.is-valid, .was-validated
 .is-focused .custom-select:valid,
 .is-focused .custom-select.is-valid {
-  border-color: #999999; }
+  border-color: black; }
   .was-validated .is-focused .form-control:valid:focus, .is-focused .form-control.is-valid:focus, .was-validated
   .is-focused .custom-select:valid:focus,
   .is-focused .custom-select.is-valid:focus {
-    border-color: #999999;
+    border-color: black;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(153, 153, 153, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(153, 153, 153, 0.25); }
   .was-validated .is-focused .form-control:valid ~ .valid-feedback,
@@ -9788,7 +9788,7 @@ fieldset[disabled][disabled] .form-control, .form-control.disabled, .form-contro
     display: block; }
 
 .was-validated .is-focused .form-check-input:valid ~ .form-check-label, .is-focused .form-check-input.is-valid ~ .form-check-label {
-  color: #999999; }
+  color: black; }
 
 .was-validated .is-focused .form-check-input:valid ~ .valid-feedback,
 .was-validated .is-focused .form-check-input:valid ~ .valid-tooltip, .is-focused .form-check-input.is-valid ~ .valid-feedback,
@@ -9796,7 +9796,7 @@ fieldset[disabled][disabled] .form-control, .form-control.disabled, .form-contro
   display: block; }
 
 .was-validated .is-focused .custom-control-input:valid ~ .custom-control-label, .is-focused .custom-control-input.is-valid ~ .custom-control-label {
-  color: #999999; }
+  color: black; }
   .was-validated .is-focused .custom-control-input:valid ~ .custom-control-label::before, .is-focused .custom-control-input.is-valid ~ .custom-control-label::before {
     background-color: #d9d9d9; }
 
@@ -9813,7 +9813,7 @@ fieldset[disabled][disabled] .form-control, .form-control.disabled, .form-contro
           box-shadow: 0 0 0 1px #fafafa, 0 0 0 0.2rem rgba(153, 153, 153, 0.25); }
 
 .was-validated .is-focused .custom-file-input:valid ~ .custom-file-label, .is-focused .custom-file-input.is-valid ~ .custom-file-label {
-  border-color: #999999; }
+  border-color: black; }
   .was-validated .is-focused .custom-file-input:valid ~ .custom-file-label::before, .is-focused .custom-file-input.is-valid ~ .custom-file-label::before {
     border-color: inherit; }
 
@@ -9831,7 +9831,7 @@ fieldset[disabled][disabled] .form-control, .form-control.disabled, .form-contro
   color: #9c27b0; }
 
 .is-focused .bmd-label-placeholder {
-  color: #999999; }
+  color: black; }
 
 .is-focused .form-control {
   border-color: #d2d2d2; }
@@ -11370,7 +11370,7 @@ fieldset[disabled] .form-group .form-control {
   .badge.badge-rose {
     background-color: #e91e63; }
   .badge.badge-default {
-    background-color: #999999; }
+    background-color: black; }
 
 .alert {
   border: 0;
@@ -11501,7 +11501,7 @@ fieldset[disabled] .form-group .form-control {
   min-width: 30px;
   height: 30px;
   line-height: 30px;
-  color: #999999;
+  color: black;
   font-weight: 400;
   font-size: 12px;
   text-transform: uppercase;
@@ -11510,11 +11510,11 @@ fieldset[disabled] .form-group .form-control {
   .pagination > .page-item > .page-link:hover, .pagination > .page-item > .page-link:focus,
   .pagination > .page-item > span:hover,
   .pagination > .page-item > span:focus {
-    color: #999999; }
+    color: black; }
 
 .pagination > .page-item.active > a,
 .pagination > .page-item.active > span {
-  color: #999999; }
+  color: black; }
   .pagination > .page-item.active > a, .pagination > .page-item.active > a:focus, .pagination > .page-item.active > a:hover,
   .pagination > .page-item.active > span,
   .pagination > .page-item.active > span:focus,
@@ -11636,14 +11636,14 @@ fieldset[disabled] .form-group .form-control {
   margin: 0 auto;
   padding: 70px 0 30px; }
   .info .icon {
-    color: #999999; }
+    color: black; }
     .info .icon > i {
       font-size: 3.85rem; }
   .info .info-title {
     color: #3C4858;
     margin: 1.75rem 0 0.875rem; }
   .info p {
-    color: #999999; }
+    color: black; }
 
 .info-horizontal .icon {
   float: left;
@@ -11738,7 +11738,7 @@ h2.title {
 .description,
 .card-description,
 .footer-big p {
-  color: #999999; }
+  color: black; }
 
 .text-warning {
   color: #ff9800 !important; }
@@ -11759,7 +11759,7 @@ h2.title {
   color: #e91e63 !important; }
 
 .text-gray {
-  color: #999999 !important; }
+  color: black !important; }
 
 .card .card-body h4.card-title {
   margin-bottom: 15px; }
@@ -11809,9 +11809,9 @@ h2.title {
     .nav-tabs .nav-link.active:hover, .nav-tabs .nav-link.active:focus {
       border-color: #9c27b0; }
   .nav-tabs .nav-link.disabled {
-    color: #999999; }
+    color: black; }
     .nav-tabs .nav-link.disabled, .nav-tabs .nav-link.disabled:hover, .nav-tabs .nav-link.disabled:focus {
-      color: #999999; }
+      color: black; }
 
 .nav-tabs.header-primary .nav-link {
   color: white; }
@@ -11993,7 +11993,7 @@ h2.title {
       padding-top: 0; }
 
 .modal .modal-header .close {
-  color: #999999; }
+  color: black; }
   .modal .modal-header .close:hover, .modal .modal-header .close:focus {
     opacity: 1; }
   .modal .modal-header .close i {
@@ -13538,7 +13538,7 @@ h2.title {
   font-weight: 400;
   font-size: 1.5em; }
   .table-shopping .td-name small {
-    color: #999999;
+    color: black;
     font-size: 0.75em;
     font-weight: 300; }
 
