@@ -48,180 +48,180 @@ export class DashboardComponent implements OnInit {
     seq = 0;
   };
 
-  drinks: number = 0;
-  FirstName: string = '';
-  LastName: string = '';
+//   drinks: number = 0;
+//   FirstName: string = '';
+//   LastName: string = '';
 
 
 
-  changeName():void{
-      this.FirstName = 'New First Name';
-      this.LastName = 'New Last Name';
-  }
-  drinkcounter(timestart) {
-    this.drinks += 1
-    console.log(this.drinks)
-    this.addbac("male", 100)
-    this.decayBac()
-  }
+//   changeName():void{
+//       this.FirstName = 'New First Name';
+//       this.LastName = 'New Last Name';
+//   }
+//   drinkcounter(timestart) {
+//     this.drinks += 1
+//     console.log(this.drinks)
+//     this.addbac("male", 100)
+//     this.decayBac()
+//   }
 
-  bac: number = 0;
-  currentbac: any = 0.000;
+//   bac: number = 0;
+//   currentbac: any = 0.000;
 
-  addbac(sex, weight){
-    if(sex === "male"){
-        if(weight >= 90 && weight < 110){
-            this.bac += .038
-        }
-        if(weight >= 110 && weight < 130){
-            this.bac += .031
-        }
-        if(weight >= 130 && weight < 150){
-            this.bac += .027
-        }
-        if(weight >= 150 && weight < 170){
-            this.bac += .023
-        }
-        if(weight >= 170 && weight < 190){
-            this.bac += .021
-        }
-        if(weight >= 190 && weight < 210){
-            this.bac += .019
-        }
-        if(weight >= 210 && weight < 230){
-            this.bac += .017
-        }
-        if(weight >= 230){
-            this.bac += .016
-        }
+//   addbac(sex, weight){
+//     if(sex === "male"){
+//         if(weight >= 90 && weight < 110){
+//             this.bac += .038
+//         }
+//         if(weight >= 110 && weight < 130){
+//             this.bac += .031
+//         }
+//         if(weight >= 130 && weight < 150){
+//             this.bac += .027
+//         }
+//         if(weight >= 150 && weight < 170){
+//             this.bac += .023
+//         }
+//         if(weight >= 170 && weight < 190){
+//             this.bac += .021
+//         }
+//         if(weight >= 190 && weight < 210){
+//             this.bac += .019
+//         }
+//         if(weight >= 210 && weight < 230){
+//             this.bac += .017
+//         }
+//         if(weight >= 230){
+//             this.bac += .016
+//         }
         
-    }
-    if(sex === "female"){
-        if(weight >= 90 && weight < 110){
-            this.bac += .045
-        }
-        if(weight >= 110 && weight < 130){
-            this.bac += .038
-        }
-        if(weight >= 130 && weight < 150){
-            this.bac += .032
-        }
-        if(weight >= 150 && weight < 170){
-            this.bac += .028
-        }
-        if(weight >= 170 && weight < 190){
-            this.bac += .025
-        }
-        if(weight >= 190 && weight < 210){
-            this.bac += .023
-        }
-        if(weight >= 210 && weight < 230){
-            this.bac += .021
-        }
-        if(weight >= 230){
-            this.bac += .019
-        }
-    }
-    console.log(this.bac)
-        this.timeBac()
-}
+//     }
+//     if(sex === "female"){
+//         if(weight >= 90 && weight < 110){
+//             this.bac += .045
+//         }
+//         if(weight >= 110 && weight < 130){
+//             this.bac += .038
+//         }
+//         if(weight >= 130 && weight < 150){
+//             this.bac += .032
+//         }
+//         if(weight >= 150 && weight < 170){
+//             this.bac += .028
+//         }
+//         if(weight >= 170 && weight < 190){
+//             this.bac += .025
+//         }
+//         if(weight >= 190 && weight < 210){
+//             this.bac += .023
+//         }
+//         if(weight >= 210 && weight < 230){
+//             this.bac += .021
+//         }
+//         if(weight >= 230){
+//             this.bac += .019
+//         }
+//     }
+//     console.log(this.bac)
+//         this.timeBac()
+// }
 
 
-  decayBac() {
-    moment().format();
-    console.log(this.bac)
-    var current = moment()
-    var timestart = this.useable
-    var difference = timestart.diff(current, "minutes")
-    console.log(difference)
-    difference *= (.015 / 60)
-    this.currentbac = this.bac
-    this.currentbac += difference
-    if (this.currentbac < 0) {
-      this.currentbac = 0
-    }
-    this.currentbac = this.currentbac.toFixed(4)
-    console.log(this.bac)
+//   decayBac() {
+//     moment().format();
+//     console.log(this.bac)
+//     var current = moment()
+//     var timestart = this.useable
+//     var difference = timestart.diff(current, "minutes")
+//     console.log(difference)
+//     difference *= (.015 / 60)
+//     this.currentbac = this.bac
+//     this.currentbac += difference
+//     if (this.currentbac < 0) {
+//       this.currentbac = 0
+//     }
+//     this.currentbac = this.currentbac.toFixed(4)
+//     console.log(this.bac)
 
-  }
-  TimeAt: string = '';
+//   }
+//   TimeAt: string = '';
 
-  timeBac() {
-    console.log(this.bac)
-    //var moment = require('moment');
-    moment().format();
-    var minutes = 0
-    //bac reduces at .015 an hour
-    //legally sober at .08 bac
-    //need to take start time of session, then find the amount of time until bac = 0 at the pace of .015 an hour.
-    var bacReductionPerMinute = .015 / 60
-    var test = this.bac
-    console.log(bacReductionPerMinute)
-    while (test > .08) {
-      test -= bacReductionPerMinute
-      minutes += 1
-    }
-    console.log(minutes)
+//   timeBac() {
+//     console.log(this.bac)
+//     //var moment = require('moment');
+//     moment().format();
+//     var minutes = 0
+//     //bac reduces at .015 an hour
+//     //legally sober at .08 bac
+//     //need to take start time of session, then find the amount of time until bac = 0 at the pace of .015 an hour.
+//     var bacReductionPerMinute = .015 / 60
+//     var test = this.bac
+//     console.log(bacReductionPerMinute)
+//     while (test > .08) {
+//       test -= bacReductionPerMinute
+//       minutes += 1
+//     }
+//     console.log(minutes)
 
-    //takes current time then adds the amount of minutes until sober, formats into hour:minutes AM/PM
-    var TimeOfSober = moment().add(minutes, "minutes").format("hh:mm a")
-    console.log(TimeOfSober)
-    this.TimeAt = TimeOfSober
-    //finds difference in minutes between current time and time will sober, though all of this is unnecessary since the minutes variable already knows this information....
-    // var TimeTillSober = moment().add(minutes, "minutes")
-    // var current = moment()
-    // console.log(TimeTillSober.diff(current, "minutes"))
+//     //takes current time then adds the amount of minutes until sober, formats into hour:minutes AM/PM
+//     var TimeOfSober = moment().add(minutes, "minutes").format("hh:mm a")
+//     console.log(TimeOfSober)
+//     this.TimeAt = TimeOfSober
+//     //finds difference in minutes between current time and time will sober, though all of this is unnecessary since the minutes variable already knows this information....
+//     // var TimeTillSober = moment().add(minutes, "minutes")
+//     // var current = moment()
+//     // console.log(TimeTillSober.diff(current, "minutes"))
 
-  }
-  useable: any = "";
-  startTime: any = "";
-  startSession() {
-    //var moment = require('moment');
-    moment().format()
-    let foreignUser = localStorage.getItem('userID');
-    console.log(foreignUser);
-    let endedAt = null;
-    var timestart = moment();
-    this.startTime = timestart.format("hh:mm a");
-    this.useable = timestart
-    this.save(endedAt, foreignUser);
-    console.log("start session timestart" + timestart)
-    return timestart
-  }
+//   }
+//   useable: any = "";
+//   startTime: any = "";
+//   startSession() {
+//     //var moment = require('moment');
+//     moment().format()
+//     let foreignUser = localStorage.getItem('userID');
+//     console.log(foreignUser);
+//     let endedAt = null;
+//     var timestart = moment();
+//     this.startTime = timestart.format("hh:mm a");
+//     this.useable = timestart
+//     this.save(endedAt, foreignUser);
+//     console.log("start session timestart" + timestart)
+//     return timestart
+//   }
 
-  endSession() {
-    let endedAt = moment.now();
-    let currentSession = this.sessionService.getMaxSession();
-    return this.sessionService.getSessions()
-    .subscribe(
-      sessions => {
-        this.session = sessions
-      }
-    );
-    console.log(currentSession);
-  }
+//   endSession() {
+//     let endedAt = moment.now();
+//     let currentSession = this.sessionService.getMaxSession();
+//     return this.sessionService.getSessions()
+//     .subscribe(
+//       sessions => {
+//         this.session = sessions
+//       }
+//     );
+//     console.log(currentSession);
+//   }
 
-  private save(endedAt, localID): void {
+//   private save(endedAt, localID): void {
 
-    if (localID) {
-    // set up session info
-    this.session.drinkGoal=500;
-    this.session.createdAt=moment().toDate();
-    this.session.endedAt = endedAt;
-    this.session.maxBAC = 40.0;
-    console.log("this is my local id" + localID);
-    this.session.UserId = localID;
+//     if (localID) {
+//     // set up session info
+//     this.session.drinkGoal=500;
+//     this.session.createdAt=moment().toDate();
+//     this.session.endedAt = endedAt;
+//     this.session.maxBAC = 40.0;
+//     console.log("this is my local id" + localID);
+//     this.session.UserId = localID;
 
-    // Set session Id for tracking
-    this.sessionService.addSession(this.session)
-      .subscribe(sess =>
-        localStorage.setItem('sessionId', sess.id.toString())
-      );
-    }
-    else {
-      console.log("Must be logged in!");
-    }
-  }
+//     // Set session Id for tracking
+//     this.sessionService.addSession(this.session)
+//       .subscribe(sess =>
+//         localStorage.setItem('sessionId', sess.id.toString())
+//       );
+//     }
+//     else {
+//       console.log("Must be logged in!");
+//     }
+//   }
 
   startAnimationForBarChart(chart) {
     let seq2: any, delays2: any, durations2: any;
