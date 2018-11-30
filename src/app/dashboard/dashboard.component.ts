@@ -49,7 +49,10 @@ export class DashboardComponent implements OnInit {
   };
 
   drinks: number = 0;
+  FirstName: string = '';
   LastName: string = '';
+
+
 
   changeName():void{
       this.FirstName = 'New First Name';
@@ -63,7 +66,7 @@ export class DashboardComponent implements OnInit {
   }
 
   bac: number = 0;
-  currentbac: number = 0.000;
+  currentbac: any = 0.000;
 
   addbac(sex, weight){
     if(sex === "male"){
@@ -170,8 +173,8 @@ export class DashboardComponent implements OnInit {
     // console.log(TimeTillSober.diff(current, "minutes"))
 
   }
-  useable: number = '';
-  startTime: number = '';
+  useable: any = "";
+  startTime: any = "";
   startSession() {
     //var moment = require('moment');
     moment().format()
@@ -192,7 +195,7 @@ export class DashboardComponent implements OnInit {
     return this.sessionService.getSessions()
     .subscribe(
       sessions => {
-        this.session=sessions
+        this.session = sessions
       }
     );
     console.log(currentSession);
