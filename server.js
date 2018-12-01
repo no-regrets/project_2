@@ -22,22 +22,22 @@ require('./src/app/routes/drink.route')(app);
 require('./src/app/routes/session.route')(app);
 
  
+// force: true will drop the table if it already exists
+db.sequelize.sync({force: true}).then(() => {
+  console.log('Drop and Resync with { force: true }');
 
+});
 
 // Create a Server
 let PORT = process.env.PORT || 8080;
-var server = app.listen(PORT, function () {
+var server = app.listen(PORT, "0.0.0.0", function () {
  
   let host = server.address().address;
   let port = server.address().port;
 
   console.log("App listening at http://%s:%s", host, port);
 });
-// force: true will drop the table if it already exists
-db.sequelize.sync({force: true}).then(() => {
-  console.log('Drop and Resync with { force: true }');
 
-});
 
 
 
