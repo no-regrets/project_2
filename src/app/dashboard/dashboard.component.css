@@ -21,10 +21,11 @@
 
 .backColor{
     background: rgb(74, 103, 27, .65);
+    margin: 15px;
     /* background: #49671f; */
 }
 .cardColor{
-    background: rgb(246, 247, 49, .9);
+    background: rgb(246, 247, 49, .97);
     padding-top: 5px;
 }
 
@@ -35,7 +36,8 @@
 .btnSize{
     height: auto;
     width: 100%;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     align-content: center
     
 }

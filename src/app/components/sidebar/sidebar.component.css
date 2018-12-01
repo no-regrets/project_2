@@ -1,4 +1,44 @@
 .nrlogo{
     width: 80%;
-    height: 80%
+    height: 80%;
+}
+
+.coasterBack{
+    content: "";
+    background-position: center;
+    background-size:120%;
+    background-image: url("/assets/img/rustic-wood-table.jpg");
+
+}
+
+@font-face{
+    font-family:"neon";
+    font-weight: normal;
+    font-style: normal;
+    src: local("neon"), url("/assets/css/fonts/HalogenGasLights.otf")
+}
+
+.neon{
+    color: #c10b0d;
+    font-family: "neon" ;
+    text-shadow: 0 0 20px #FF0000; 
+
+
+}
+
+.greenBack{
+    background: rgba(74, 103, 27);
+
+}
+
+i{
+    color: rgb(246,247,49) !important ;
+}
+p{
+    color: rgb(246,247,49) ;
+}
+
+
+.yellowBack{
+    background: rgb(246, 247, 49, .5);
 }
