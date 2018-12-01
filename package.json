@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prestart": "ng build"
-    },
+  },
   "private": true,
   "dependencies": {
     "@agm/core": "1.0.0-beta.5",
