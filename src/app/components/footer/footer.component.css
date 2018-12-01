@@ -1,0 +1,11 @@
+.logo {
+    height: auto;
+    width: 10%;
+}
+
+.backCoaster{
+    background-position: center;
+    background-size:105%;
+    background-image: url("/assets/img/coaster.png");
+    border:0;
+}
