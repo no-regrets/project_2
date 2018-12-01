@@ -26,7 +26,7 @@ require('./src/app/routes/session.route')(app);
 
 // Create a Server
 let PORT = process.env.PORT || 8080;
-var server = app.listen(PORT, "0.0.0.0", function () {
+var server = app.listen(PORT, function () {
  
   let host = server.address().address;
   let port = server.address().port;
