@@ -16,7 +16,6 @@ const db = require('./src/app/model');
   
 
 
-require('./src/app/routes/customer.route')(app);
 require('./src/app/routes/user.route')(app);
 require('./src/app/routes/drink.route')(app);
 require('./src/app/routes/session.route')(app);
